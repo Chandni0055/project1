@@ -1,0 +1,157 @@
+:root {
+  --bg: #f3f4f8;
+  --card: #ffffffcc;
+  --text: #222;
+  --accent: #0072ff;
+  --glass-bg: rgba(255, 255, 255, 0.3);
+}
+
+body.dark {
+  --bg: #121212;
+  --card: #1e1e1ecc;
+  --text: #f1f1f1;
+  --accent: #00c3ff;
+  --glass-bg: rgba(30, 30, 30, 0.3);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: linear-gradient(120deg, #00c3ff, #0072ff);
+  color: white;
+  position: relative;
+}
+
+header h1 {
+  font-size: 3rem;
+  animation: float 3s infinite ease-in-out;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#themeToggle:hover {
+  background: white;
+  color: #0072ff;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.glass {
+  background: var(--glass-bg);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #f0f0f0;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005dd1;
+}
+
+.post {
+  background: var(--card);
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.post:hover {
+  transform: translateY(-3px);
+}
+
+.post h3 {
+  color: var(--accent);
+}
+
+.comment-box {
+  margin-top: 1rem;
+}
+
+.comment-box input {
+  width: 70%;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.comments li {
+  background: #eaeaea;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.like-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: var(--accent);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
