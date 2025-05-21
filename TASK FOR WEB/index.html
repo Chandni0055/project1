@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventLitez</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="toggleTheme">🌙</button>
+  </div>
+
+  <div class="container glass">
+    <h1>✨ EventLitez</h1>
+    <p class="subtitle">Create and manage stylish events effortlessly</p>
+
+    <form id="eventForm" class="event-form">
+      <div class="input-group">
+        <input type="text" id="eventName" required />
+        <label for="eventName">Event Name</label>
+      </div>
+
+      <div class="input-group">
+        <input type="date" id="eventDate" required />
+        <label for="eventDate">Date</label>
+      </div>
+
+      <div class="input-group">
+        <input type="time" id="eventTime" required />
+        <label for="eventTime">Time</label>
+      </div>
+
+      <div class="input-group">
+        <input type="text" id="eventLocation" required />
+        <label for="eventLocation">Location</label>
+      </div>
+
+      <button type="submit" class="btn-add">➕ Add Event</button>
+    </form>
+
+    <h2>📅 Upcoming Events</h2>
+    <div id="eventList" class="event-list"></div>
+  </div>
+</body>
+</html>
+
